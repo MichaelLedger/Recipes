@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let titlebar = windowScene.titlebar {
             titlebar.toolbar = toolbar
-            titlebar.toolbarStyle = .automatic
+//            titlebar.toolbarStyle = .automatic
         }
         #endif
     }

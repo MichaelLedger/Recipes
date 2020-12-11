@@ -63,10 +63,10 @@ class SidebarViewController: UIViewController {
         
         collectionsSubscriber = dataStore.$collections
             .receive(on: RunLoop.main)
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-                let snapshot = self.collectionsSnapshot()
-                self.dataSource.apply(snapshot, to: .collections, animatingDifferences: true)
+            .sink { _ in //[weak self] _ in
+//                guard let self = self else { return }
+//                let snapshot = self.collectionsSnapshot()
+//                self.dataSource.apply(snapshot, to: .collections, animatingDifferences: true)
             }
     }
     
@@ -92,13 +92,14 @@ extension SidebarViewController {
     }
     
     private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout() { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-            var configuration = UICollectionLayoutListConfiguration(appearance: .sidebar)
-            configuration.showsSeparators = false
-            configuration.headerMode = .firstItemInSection
-            let section = NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
-            return section
-        }
+//        let layout = UICollectionViewCompositionalLayout() { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+//            var configuration = UICollectionLayoutListConfiguration(appearance: .sidebar)
+//            configuration.showsSeparators = false
+//            configuration.headerMode = .firstItemInSection
+//            let section = NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
+//            return section
+//        }
+        let layout = UICollectionViewLayout()
         return layout
     }
     
@@ -157,89 +158,89 @@ extension SidebarViewController: UICollectionViewDelegate {
 extension SidebarViewController {
     
     private func configureDataSource() {
-        let headerRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
-            (cell, indexPath, item) in
-            
-            var contentConfiguration = UIListContentConfiguration.sidebarHeader()
-            contentConfiguration.text = item.title
-            contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .subheadline)
-            contentConfiguration.textProperties.color = .secondaryLabel
-            
-            cell.contentConfiguration = contentConfiguration
-            cell.accessories = [.outlineDisclosure()]
-        }
-        
-        let expandableRowRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
-            (cell, indexPath, item) in
-            
-            var contentConfiguration = UIListContentConfiguration.sidebarSubtitleCell()
-            contentConfiguration.text = item.title
-            contentConfiguration.secondaryText = item.subtitle
-            contentConfiguration.image = item.image
-            
-            cell.contentConfiguration = contentConfiguration
-            cell.accessories = [.outlineDisclosure()]
-        }
-        
-        let rowRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
-            (cell, indexPath, item) in
-            
-            var contentConfiguration = UIListContentConfiguration.sidebarSubtitleCell()
-            contentConfiguration.text = item.title
-            contentConfiguration.secondaryText = item.subtitle
-            contentConfiguration.image = item.image
-            
-            cell.contentConfiguration = contentConfiguration
-        }
-        
-        dataSource = UICollectionViewDiffableDataSource<SidebarSection, SidebarItem>(collectionView: collectionView) {
-            (collectionView, indexPath, item) -> UICollectionViewCell in
-            
-            switch item.type {
-            case .header:
-                return collectionView.dequeueConfiguredReusableCell(using: headerRegistration, for: indexPath, item: item)
-            case .expandableRow:
-                return collectionView.dequeueConfiguredReusableCell(using: expandableRowRegistration, for: indexPath, item: item)
-            default:
-                return collectionView.dequeueConfiguredReusableCell(using: rowRegistration, for: indexPath, item: item)
-            }
-        }
+//        let headerRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
+//            (cell, indexPath, item) in
+//            
+//            var contentConfiguration = UIListContentConfiguration.sidebarHeader()
+//            contentConfiguration.text = item.title
+//            contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .subheadline)
+//            contentConfiguration.textProperties.color = .secondaryLabel
+//            
+//            cell.contentConfiguration = contentConfiguration
+//            cell.accessories = [.outlineDisclosure()]
+//        }
+//        
+//        let expandableRowRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
+//            (cell, indexPath, item) in
+//            
+//            var contentConfiguration = UIListContentConfiguration.sidebarSubtitleCell()
+//            contentConfiguration.text = item.title
+//            contentConfiguration.secondaryText = item.subtitle
+//            contentConfiguration.image = item.image
+//            
+//            cell.contentConfiguration = contentConfiguration
+//            cell.accessories = [.outlineDisclosure()]
+//        }
+//        
+//        let rowRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SidebarItem> {
+//            (cell, indexPath, item) in
+//            
+//            var contentConfiguration = UIListContentConfiguration.sidebarSubtitleCell()
+//            contentConfiguration.text = item.title
+//            contentConfiguration.secondaryText = item.subtitle
+//            contentConfiguration.image = item.image
+//            
+//            cell.contentConfiguration = contentConfiguration
+//        }
+//        
+//        dataSource = UICollectionViewDiffableDataSource<SidebarSection, SidebarItem>(collectionView: collectionView) {
+//            (collectionView, indexPath, item) -> UICollectionViewCell in
+//            
+//            switch item.type {
+//            case .header:
+//                return collectionView.dequeueConfiguredReusableCell(using: headerRegistration, for: indexPath, item: item)
+//            case .expandableRow:
+//                return collectionView.dequeueConfiguredReusableCell(using: expandableRowRegistration, for: indexPath, item: item)
+//            default:
+//                return collectionView.dequeueConfiguredReusableCell(using: rowRegistration, for: indexPath, item: item)
+//            }
+//        }
     }
     
-    private func librarySnapshot() -> NSDiffableDataSourceSectionSnapshot<SidebarItem> {
-        var snapshot = NSDiffableDataSourceSectionSnapshot<SidebarItem>()
-        let header = SidebarItem.header(title: "Library")
-        let items: [SidebarItem] = [
-            .row(title: TabBarItem.all.title(), subtitle: nil, image: TabBarItem.all.image(), id: RowIdentifier.allRecipes),
-            .row(title: TabBarItem.favorites.title(), subtitle: nil, image: TabBarItem.favorites.image(), id: RowIdentifier.favorites),
-            .row(title: TabBarItem.recents.title(), subtitle: nil, image: TabBarItem.recents.image(), id: RowIdentifier.recents)
-        ]
-        
-        snapshot.append([header])
-        snapshot.expand([header])
-        snapshot.append(items, to: header)
-        return snapshot
-    }
+//    private func librarySnapshot() -> NSDiffableDataSourceSectionSnapshot<SidebarItem> {
+//        var snapshot = NSDiffableDataSourceSectionSnapshot<SidebarItem>()
+//        let header = SidebarItem.header(title: "Library")
+//        let items: [SidebarItem] = [
+//            .row(title: TabBarItem.all.title(), subtitle: nil, image: TabBarItem.all.image(), id: RowIdentifier.allRecipes),
+//            .row(title: TabBarItem.favorites.title(), subtitle: nil, image: TabBarItem.favorites.image(), id: RowIdentifier.favorites),
+//            .row(title: TabBarItem.recents.title(), subtitle: nil, image: TabBarItem.recents.image(), id: RowIdentifier.recents)
+//        ]
+//
+//        snapshot.append([header])
+//        snapshot.expand([header])
+//        snapshot.append(items, to: header)
+//        return snapshot
+//    }
     
-    private func collectionsSnapshot() -> NSDiffableDataSourceSectionSnapshot<SidebarItem> {
-        var snapshot = NSDiffableDataSourceSectionSnapshot<SidebarItem>()
-        let header = SidebarItem.header(title: TabBarItem.collections.title())
-        let image = TabBarItem.collections.image()
-        
-        var items = [SidebarItem]()
-        for collectionName in dataStore.collections {
-            items.append(.row(title: collectionName, subtitle: nil, image: image))
-        }
-        
-        snapshot.append([header])
-        snapshot.expand([header])
-        snapshot.append(items, to: header)
-        return snapshot
-    }
+//    private func collectionsSnapshot() -> NSDiffableDataSourceSectionSnapshot<SidebarItem> {
+//        var snapshot = NSDiffableDataSourceSectionSnapshot<SidebarItem>()
+//        let header = SidebarItem.header(title: TabBarItem.collections.title())
+//        let image = TabBarItem.collections.image()
+//
+//        var items = [SidebarItem]()
+//        for collectionName in dataStore.collections {
+//            items.append(.row(title: collectionName, subtitle: nil, image: image))
+//        }
+//
+//        snapshot.append([header])
+//        snapshot.expand([header])
+//        snapshot.append(items, to: header)
+//        return snapshot
+//    }
     
     private func applyInitialSnapshot() {
-        dataSource.apply(librarySnapshot(), to: .library, animatingDifferences: false)
-        dataSource.apply(collectionsSnapshot(), to: .collections, animatingDifferences: false)
+//        dataSource.apply(librarySnapshot(), to: .library, animatingDifferences: false)
+//        dataSource.apply(collectionsSnapshot(), to: .collections, animatingDifferences: false)
     }
     
 }
