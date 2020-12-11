@@ -3,9 +3,9 @@ Sample code of Mac Catalyst Tutorials.
 
 > **NOTE**
 
-> To run and debug the Mac app, ensure your Mac is running macOS 11 or later.
+*To run and debug the Mac app, ensure your Mac is running macOS 11 or later.*
 
-> Xcode 12.1 or later.
+*Xcode 12.1 or later.*
 
 > References
 
