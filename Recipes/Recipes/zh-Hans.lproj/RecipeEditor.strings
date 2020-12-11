@@ -1,0 +1,42 @@
+
+/* Class = "UITextField"; placeholder = "Breakfast, Lunch, Dinner"; ObjectID = "1aE-gM-zT9"; */
+"1aE-gM-zT9.placeholder" = "早餐, 午餐, 晚餐";
+
+/* Class = "UILabel"; text = "Ingredients:"; ObjectID = "5Uo-XY-MNQ"; */
+"5Uo-XY-MNQ.text" = "配料:";
+
+/* Class = "UITextField"; placeholder = "in seconds"; ObjectID = "BA5-Nf-Ace"; */
+"BA5-Nf-Ace.placeholder" = "秒种";
+
+/* Class = "UITextField"; placeholder = "4-6"; ObjectID = "EnO-mx-2LC"; */
+"EnO-mx-2LC.placeholder" = "4-6";
+
+/* Class = "UILabel"; text = "Cook time:"; ObjectID = "FEI-F4-AXR"; */
+"FEI-F4-AXR.text" = "烹饪时长:";
+
+/* Class = "UILabel"; text = "Prep time:"; ObjectID = "FFy-aY-pYl"; */
+"FFy-aY-pYl.text" = "准备时长:";
+
+/* Class = "UITextField"; placeholder = "in seconds"; ObjectID = "HGG-QF-LkW"; */
+"HGG-QF-LkW.placeholder" = "秒钟";
+
+/* Class = "UIButton"; normalTitle = "Edit Photo"; ObjectID = "QIk-V5-p3g"; */
+"QIk-V5-p3g.normalTitle" = "编辑图片";
+
+/* Class = "UILabel"; text = "Photo:"; ObjectID = "TiL-hZ-CFx"; */
+"TiL-hZ-CFx.text" = "图片:";
+
+/* Class = "UILabel"; text = "Collections:"; ObjectID = "a8H-FH-SGr"; */
+"a8H-FH-SGr.text" = "收藏:";
+
+/* Class = "UILabel"; text = "Servings:"; ObjectID = "ikj-SP-fij"; */
+"ikj-SP-fij.text" = "上菜:";
+
+/* Class = "UILabel"; text = "Title:"; ObjectID = "tKR-LL-Buq"; */
+"tKR-LL-Buq.text" = "标题:";
+
+/* Class = "UINavigationItem"; title = "Edit"; ObjectID = "vWu-Le-7ot"; */
+"vWu-Le-7ot.title" = "编辑";
+
+/* Class = "UILabel"; text = "Directions:"; ObjectID = "zob-xV-fNI"; */
+"zob-xV-fNI.text" = "说明:";

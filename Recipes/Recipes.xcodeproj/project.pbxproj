@@ -59,6 +59,7 @@
 		68E6C2F02482F62100F79593 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6C2EF2482F62100F79593 /* TabBarItem.swift */; };
 		68FAA50C242E8E7E0061EF86 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FAA50B242E8E7E0061EF86 /* RecipeDetailViewController.swift */; };
 		68FBC9FE2437A6A100002F7C /* SplitViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FBC9FD2437A6A100002F7C /* SplitViewDelegate.swift */; };
+		8671539825835CCB00F38A61 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8671539725835CCB00F38A61 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,15 @@
 		68FBC9FD2437A6A100002F7C /* SplitViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewDelegate.swift; sourceTree = "<group>"; };
 		6A57232AC11588B5C300FFCB /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		71A49EA55E7125919CA06B49 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		8671539725835CCB00F38A61 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8671539A25836C5600F38A61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		8671539B25836C5700F38A61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RecipeDetail.strings"; sourceTree = "<group>"; };
+		8671539C25836C5700F38A61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RecipeEditor.strings"; sourceTree = "<group>"; };
+		8671539D25836C5700F38A61 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		867153A025836C9F00F38A61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		867153A225836CA200F38A61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RecipeDetail.strings; sourceTree = "<group>"; };
+		867153A425836CA400F38A61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RecipeEditor.strings; sourceTree = "<group>"; };
+		867153A625836CA600F38A61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +202,7 @@
 				684CD66D242BCF61004090E5 /* Info.plist */,
 				684CD675242BFD5E004090E5 /* Models */,
 				684CD674242BFD43004090E5 /* Resources */,
+				8671539725835CCB00F38A61 /* Settings.bundle */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -287,6 +298,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 684CD653242BCF60004090E5;
 			productRefGroup = 684CD65D242BCF60004090E5 /* Products */;
@@ -311,6 +323,7 @@
 				684CD677242BFD98004090E5 /* recipeData.json in Resources */,
 				684EB3A3248AB04A00CD353F /* AppleCake.jpg in Resources */,
 				684EB399248AB04A00CD353F /* SpicyTomatoSauce-thumb.jpg in Resources */,
+				8671539825835CCB00F38A61 /* Settings.bundle in Resources */,
 				684EB3A8248AB04A00CD353F /* PassionfruitMangoSorbet.jpg in Resources */,
 				684EB3A0248AB04A00CD353F /* MushroomTapioca.jpg in Resources */,
 				684EB397248AB04A00CD353F /* ChickpeaCurry-thumb.jpg in Resources */,
@@ -375,6 +388,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				684CD666242BCF60004090E5 /* Base */,
+				8671539A25836C5600F38A61 /* zh-Hans */,
+				867153A025836C9F00F38A61 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -383,6 +398,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				684CD66B242BCF61004090E5 /* Base */,
+				8671539D25836C5700F38A61 /* zh-Hans */,
+				867153A625836CA600F38A61 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -391,6 +408,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				68E6C2E82482AAF300F79593 /* Base */,
+				8671539C25836C5700F38A61 /* zh-Hans */,
+				867153A425836CA400F38A61 /* en */,
 			);
 			name = RecipeEditor.storyboard;
 			sourceTree = "<group>";
@@ -399,6 +418,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				68E6C2ED2482AD0800F79593 /* Base */,
+				8671539B25836C5700F38A61 /* zh-Hans */,
+				867153A225836CA200F38A61 /* en */,
 			);
 			name = RecipeDetail.storyboard;
 			sourceTree = "<group>";
@@ -411,6 +432,7 @@
 			baseConfigurationReference = 71A49EA55E7125919CA06B49 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -473,6 +495,7 @@
 			baseConfigurationReference = 71A49EA55E7125919CA06B49 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

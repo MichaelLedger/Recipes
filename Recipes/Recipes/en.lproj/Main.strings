@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Collections"; ObjectID = "37b-mh-IvI"; */
+"37b-mh-IvI.title" = "Collections";
+
+/* Class = "UITabBarItem"; title = "Collections"; ObjectID = "Rhr-Xz-DHf"; */
+"Rhr-Xz-DHf.title" = "Collections";
+
+/* Class = "UITabBarItem"; title = "Recents"; ObjectID = "YVz-5r-RIr"; */
+"YVz-5r-RIr.title" = "Recents";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "jrS-4K-416"; */
+"jrS-4K-416.title" = "Favorites";
+
+/* Class = "UITabBarItem"; title = "All Recipes"; ObjectID = "oTW-gz-Ufu"; */
+"oTW-gz-Ufu.title" = "All Recipes";

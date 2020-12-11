@@ -1,0 +1,33 @@
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "5Cr-vX-C5x"; */
+"5Cr-vX-C5x.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "; ObjectID = "7er-ai-cDg"; */
+"7er-ai-cDg.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
+
+/* Class = "UILabel"; text = "INGREDIENTS"; ObjectID = "JjW-XS-PiM"; */
+"JjW-XS-PiM.text" = "配料";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "MPz-kq-s94"; */
+"MPz-kq-s94.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Directions"; ObjectID = "MXK-en-eld"; */
+"MXK-en-eld.text" = "使用说明";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RQG-4v-kJ0"; */
+"RQG-4v-kJ0.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Favorite"; ObjectID = "sc4-zc-jjH"; */
+"sc4-zc-jjH.title" = "最爱";
+
+/* Class = "UISegmentedControl"; tAf-2y-ECK.segmentTitles[0] = "Ingredients"; ObjectID = "tAf-2y-ECK"; */
+"tAf-2y-ECK.segmentTitles[0]" = "配料";
+
+/* Class = "UISegmentedControl"; tAf-2y-ECK.segmentTitles[1] = "Directions"; ObjectID = "tAf-2y-ECK"; */
+"tAf-2y-ECK.segmentTitles[1]" = "使用说明";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zeq-OT-X9M"; */
+"zeq-OT-X9M.text" = "标签";
+
+/* Class = "UIBarButtonItem"; title = "Share"; ObjectID = "zjz-pP-Si7"; */
+"zjz-pP-Si7.title" = "分享";

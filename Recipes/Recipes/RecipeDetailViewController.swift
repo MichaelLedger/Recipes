@@ -34,9 +34,18 @@ class RecipeDetailViewController: UIViewController, RecipeController {
     private var dataStoreSubscriber: AnyCancellable?
     private var editRecipeSubscriber: AnyCancellable?
     private var toggleRecipeIsFavoriteSubscriber: AnyCancellable?
+    
+    // KVO for preference changes.
+    private var backgroundColorObserver: NSKeyValueObservation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Listen for preference changes for the view's background color.
+        backgroundColorObserver = UserDefaults.standard.observe(\.nameColorKey, options: [.initial, .new], changeHandler: { (defaults, change) in
+            self.updatePreferredBackgroundColor(colorValue: AppDelegate.BackgroundColors(rawValue: change.newValue ?? 0) ?? AppDelegate.BackgroundColors.blue)
+        })
+        
         addNoRecipeView()
         
         if let childController = children.first(where: { $0 is RecipeDetailTopViewController }) as? RecipeDetailTopViewController {
@@ -334,5 +343,40 @@ extension RecipeDetailViewController {
         NotificationCenter.default.post(name: .activityItemsConfigurationDidChange,
                                         object: self,
                                         userInfo: [NotificationKey.activityItemsConfiguration: configuration])
+    }
+}
+
+// MARK: - User Defaults
+
+// Extend UserDefaults for quick access to nameColorKey.
+extension UserDefaults {
+    @objc dynamic var nameColorKey: Int {
+        return integer(forKey: RecipeDetailViewController.nameColorKey)
+    }
+}
+
+// MARK: - Preferred Background Color
+extension RecipeDetailViewController {
+    static let nameColorKey = "nameColorKey" // Key for obtains the preference view color.
+    
+    private func updatePreferredBackgroundColor(colorValue: AppDelegate.BackgroundColors) {
+//        let viewColor = UserDefaults.standard.integer(forKey: RecipeDetailViewController.nameColorKey)
+//        let colorValue = AppDelegate.BackgroundColors(rawValue: viewColor)
+        switch colorValue {
+        case .blue:
+            if let childController = children.first(where: { $0 is RecipeDetailTopViewController }) as? RecipeDetailTopViewController {
+                childController.titleLabel.textColor = UIColor.systemBlue
+            }
+        case .teal:
+            if let childController = children.first(where: { $0 is RecipeDetailTopViewController }) as? RecipeDetailTopViewController {
+                childController.titleLabel.textColor = UIColor.systemTeal
+            }
+        case .indigo:
+            if let childController = children.first(where: { $0 is RecipeDetailTopViewController }) as? RecipeDetailTopViewController {
+                childController.titleLabel.textColor = UIColor.systemIndigo
+            }
+//        default:
+//            Swift.debugPrint("Invalid color!")
+        }
     }
 }
